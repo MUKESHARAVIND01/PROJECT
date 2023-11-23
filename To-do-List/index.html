@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+         background-color: bisque;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height:80vh
+     
+       }
+     
+       .container {
+         border-radius: 10px;
+         width: 25%;
+         padding:20px;
+         border:2px solid black;
+         text-align: center;
+         background-color: black;
+         
+       }
+       #list:hover
+       {
+         cursor: pointer;
+         
+       }
+       h1{
+         color:yellow;
+       }
+     
+       #list
+       {
+         color: aliceblue;
+         
+       }
+     
+     button
+     {
+         margin-top: 10px;
+         align-items: center;
+     }
+     input{
+        height: 25px;
+        padding: 2px;
+        border-radius: 5px;
+        outline: none;
+     }
+     </style>
+     
+     
+     <body>
+     
+       <!-- html  -->
+     <div class="container">
+     
+         <h1>To-do list</h1>
+         <input type="text" id="input">
+         <button onclick="add()">add</button>
+     
+         <div id="list">
+     
+         </div>
+     
+     
+     </div>
+         <!-- script -->
+         <script>
+     
+         // get element 
+             var inputItem=document.getElementById("input");
+             var list=document.getElementById("list");
+     
+             
+             function add()
+             {
+               // create element for list
+                 var listItem =document.createElement("p");
+                 listItem.innerHTML=inputItem.value;
+                 list.append(listItem);  // list item store in list 
+                 inputItem.value=" ";   // input value none after add button press
+      
+                 // using listener 
+                 listItem.addEventListener('click',()=>{    
+                 listItem.style.textDecoration="line-through";
+                })
+     
+             listItem.addEventListener("dblclick",()=>{
+                 listItem.remove();
+                })
+     
+                
+             }
+     
+             
+         </script>
+</body>
+</html>

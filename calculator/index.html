@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    
+    <title>CALCULATOR</title>
+</head>
+<body>
+    <div class="calculator">
+        <table class="table">
+            <tr> 
+                <td colspan="5"><input type="text" class="input" id="display" placeholder="0"></td>
+            </tr>
+            <tr>
+                <td><button onclick="AC()">AC</button></td>
+                <td><button onclick="del()">del</button></td>
+                <td><button onclick="operator('%')">%</button></td>
+                <td><button onclick="operator('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="inputValue('9')">9</button></td>
+                <td><button onclick="inputValue('8')">8</button></td>
+                <td><button onclick="inputValue('7')">7</button></td>
+                <td><button onclick="operator('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="inputValue('6')">6</button></td>
+                <td><button onclick="inputValue('5')">5</button></td>
+                <td><button onclick="inputValue('4')">4</button></td>
+                <td><button onclick="operator('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="inputValue('3')">3</button></td>
+                <td><button onclick="inputValue('2')">2</button></td>
+                <td><button onclick="inputValue('1')">1</button></td>
+                <td><button onclick="operator('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="inputValue('00')">00</button></td>
+                <td><button onclick="inputValue('0')">0</button></td>
+                <td><button class="equal" onclick="equal()">=</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+</html>
